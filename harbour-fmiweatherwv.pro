@@ -10,23 +10,25 @@
 #   - translation filenames have to be changed
 
 # The name of your application
-TARGET = FMIweather
+TARGET = harbour-fmiweatherwv
 
 CONFIG += sailfishapp
 
-SOURCES += src/FMIweather.cpp
+SOURCES += src/harbour-fmiweatherwv.cpp
 
-OTHER_FILES += qml/FMIweather.qml \
+OTHER_FILES += qml/harbour-fmiweatherwv.qml \
     qml/cover/CoverPage.qml \
     qml/pages/FirstPage.qml \
-    rpm/FMIweather.changes.in \
-    rpm/FMIweather.spec \
-    rpm/FMIweather.yaml \
+    qml/pages/SecondPage.qml \
+    rpm/harbour-fmiweatherwv.spec \
+    rpm/harbour-fmiweatherwv.yaml \
     translations/*.ts \
-    FMIweather.desktop
+    harbour-fmiweatherwv.desktop \
+    qml/pages/devicePixelRatioHack.js \
+    rpm/harbour-fmiweatherwv.changes
 
 # to disable building translations every time, comment out the
 # following CONFIG line
-CONFIG += sailfishapp_i18n
-TRANSLATIONS += translations/FMIweather-de.ts
+#CONFIG += sailfishapp_i18n
+#TRANSLATIONS += translations/harbour-fmiweatherwv-de.ts
 

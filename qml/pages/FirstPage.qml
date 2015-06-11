@@ -29,6 +29,7 @@
 */
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import QtWebKit 3.0
 
 Page {
     id: igPage
@@ -37,9 +38,12 @@ Page {
          anchors.fill: parent
          url: "http://m.fmi.fi/saa/"
          quickScroll : true
+         experimental.userScripts: [
+                     Qt.resolvedUrl("devicePixelRatioHack.js"),
+                ]
      }
      function refresh() {
             webView.reload()
-         }
+     }
  }
 
